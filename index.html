@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regal Masaj - Chișinău</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="navbar-main">
+        <div class="navbar-container">
+          <!-- Left Group: Social Icons -->
+          <div class="navbar-left-group">
+            <div class="social-icons">
+              <a href="#" aria-label="WhatsApp"
+                ><i class="fab fa-whatsapp"></i
+              ></a>
+              <a href="#" aria-label="Instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" aria-label="Facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+            </div>
+          </div>
+
+          <!-- Center Group: Navigation Links and Logo -->
+          <div class="navbar-center-group">
+            <!-- Left Navigation Links -->
+            <ul class="nav-links nav-left">
+              <li><a href="#acasa">Acasă</a></li>
+              <li><a href="#despre">Despre Noi</a></li>
+              <li><a href="#servicii">Servicii</a></li>
+            </ul>
+
+            <!-- Logo -->
+            <div class="logo">
+              <a href="#acasa">
+                <img src="images/logoPNG.png" alt="Regal Masaj Logo" />
+              </a>
+            </div>
+
+            <!-- Right Navigation Links -->
+            <ul class="nav-links nav-right">
+              <li><a href="#programare">Programare</a></li>
+              <li><a href="#blog">Blog</a></li>
+              <li><a href="#intrebari">Întrebări Frecvente</a></li>
+            </ul>
+          </div>
+
+          <!-- Right Group: Contact Info -->
+          <div class="navbar-right-group">
+            <div class="contact-info">
+              <span>Chișinău, bd. Cuza Vodă 30/2</span>
+              <span class="phone">+373-688-05-305</span>
+            </div>
+          </div>
+
+          <!-- Mobile Phone Icon -->
+          <a
+            href="tel:+37368805305"
+            class="mobile-phone-icon"
+            aria-label="Call"
+          >
+            <i class="fas fa-phone"></i>
+          </a>
+
+          <!-- Hamburger Menu -->
+          <button class="hamburger" aria-label="Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <video class="hero-video" autoplay muted loop playsinline preload="auto">
+        <source src="images/herovideotrim2.mp4" type="video/mp4" />
+        <source src="images/herovideo.MOV" type="video/quicktime" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Experiența ta începe la</h1>
+            <p class="hero-description-mobile">Regal Masaj este un studio de masaj profesional din Chișinău, Moldova, specializat în terapii relaxante și masaje de lux.</p>
+        </div>
+        <div class="hero-cta-mobile">
+            <a href="tel:+37368805305" class="hero-cta-button hero-cta-primary">Programare</a>
+            <a href="#servicii" class="hero-cta-button hero-cta-secondary">Vezi Servicii</a>
+        </div>
+        <!-- <a href="#servicii" class="hero-cta-button">Vezi Servicii</a> -->
+      </div>
+      <div class="hero-brand">
+        <h2 class="hero-brand-regal">REGAL</h2>
+        <h2 class="hero-brand-masaj">MASAJ</h2>
+        <div class="hero-cta">
+          <a href="tel:+37368805305" class="hero-cta-button">Programare</a>
+          <a href="tel:+37368805305" class="hero-cta-phone">+373 688 05 305</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Servicii Section -->
+    <section class="servicii" id="servicii">
+      <div class="servicii-container">
+        <h2 class="servicii-title">Serviciile Noastre</h2>
+        <p class="servicii-description">Oferim o gamă variată de servicii de masaj profesional, adaptate nevoilor tale: Masaj Facial pentru revitalizare, Masaj Relaxant pentru destindere profundă, Masaj Terapeutic pentru dureri musculare, Masaj Sport pentru sportivi, Masaj Anticelulitic pentru tonifiere și Masaj Prenatal pentru viitoarele mămici.</p>
+        
+        <div class="servicii-divider">
+          <svg viewBox="0 0 200 20" xmlns="http://www.w3.org/2000/svg">
+            <path d="M 0 10 Q 50 0, 100 10 T 200 10" stroke="currentColor" stroke-width="2" fill="none" />
+          </svg>
+        </div>
+        
+        <div class="servicii-grid">
+          <!-- Service Item 1 -->
+          <div class="servicii-item">
+            <div class="servicii-image">
+              <img src="images/servicii/facialmasaj.webp" alt="Masaj Facial">
+            </div>
+            <h3 class="servicii-name">Masaj Facial</h3>
+          </div>
+
+          <!-- Service Item 2 -->
+          <div class="servicii-item">
+            <div class="servicii-image">
+              <img src="images/servicii/relaxingmasaj.jpg" alt="Masaj Relaxant">
+            </div>
+            <h3 class="servicii-name">Masaj Relaxant</h3>
+          </div>
+
+          <!-- Service Item 3 -->
+          <div class="servicii-item">
+            <div class="servicii-image">
+              <img src="images/servicii/masajterapeutic.webp" alt="Masaj Terapeutic">
+            </div>
+            <h3 class="servicii-name">Masaj Terapeutic</h3>
+          </div>
+
+          <!-- Service Item 4 -->
+          <div class="servicii-item">
+            <div class="servicii-image">
+              <img src="images/servicii/sportmasag.webp" alt="Masaj Sport">
+            </div>
+            <h3 class="servicii-name">Masaj Sport</h3>
+          </div>
+
+          <!-- Service Item 5 -->
+          <div class="servicii-item">
+            <div class="servicii-image">
+              <img src="images/servicii/anticeluliticmasaj.webp" alt="Masaj Anticelulitic">
+            </div>
+            <h3 class="servicii-name">Masaj Anticelulitic</h3>
+          </div>
+
+          <!-- Service Item 6 -->
+          <div class="servicii-item">
+            <div class="servicii-image">
+              <img src="images/servicii/pregnantmassage.webp" alt="Masaj Prenatal">
+            </div>
+            <h3 class="servicii-name">Masaj Prenatal</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="benefits">
+      <div class="benefits-container">
+        <div class="benefits-header">
+          <h2 class="benefits-title">Beneficiile Masajului</h2>
+          <p class="benefits-description">Descoperă cum masajul profesional poate transforma sănătatea ta fizică și mentală, oferindu-ți relaxare profundă și echilibru interior.</p>
+                                                                             </div>
+        
+        <div class="benefits-grid">
+          <!-- Benefit 1 -->
+          <div class="benefit-item">
+            <div class="benefit-circle">
+              <div class="benefit-circle-inner">
+                <img src="images/vectors/SVG/Asset 1.svg" alt="" class="benefit-icon">
+                <h3 class="benefit-name">Eliberarea tensiunii<br>musculare</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Benefit 2 -->
+          <div class="benefit-item">
+            <div class="benefit-circle">
+              <div class="benefit-circle-inner">
+                <img src="images/vectors/SVG/Asset 2.svg" alt="" class="benefit-icon">
+                <h3 class="benefit-name">Relaxare completă<br>a corpului și minții</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Benefit 3 -->
+          <div class="benefit-item">
+            <div class="benefit-circle">
+              <div class="benefit-circle-inner">
+                <img src="images/vectors/SVG/Asset 3.svg" alt="" class="benefit-icon">
+                <h3 class="benefit-name">Îmbunătățirea somnului<br>și a stării generale</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Benefit 4 -->
+          <div class="benefit-item">
+            <div class="benefit-circle">
+              <div class="benefit-circle-inner">
+                <img src="images/vectors/SVG/Asset 4.svg" alt="" class="benefit-icon">
+                <h3 class="benefit-name">Stimularea circulației<br>și detoxifierea naturală</h3>
+              </div>
+            </div>
+          </div>
+
+          <!-- Benefit 5 -->
+          <div class="benefit-item">
+            <div class="benefit-circle">
+              <div class="benefit-circle-inner">
+                <img src="images/vectors/SVG/Asset 5.svg" alt="" class="benefit-icon">
+                <h3 class="benefit-name">Echilibru emoțional<br>și claritate mentală</h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+      <ul class="mobile-nav-links">
+        <li><a href="#acasa">ACASĂ</a></li>
+        <li><a href="#despre">DESPRE NOI</a></li>
+        <li><a href="#servicii">SERVICII</a></li>
+        <li><a href="#programare">PROGRAMARE</a></li>
+        <li><a href="#blog">BLOG</a></li>
+        <li><a href="#intrebari">ÎNTREBĂRI FRECVENTE</a></li>
+      </ul>
+
+      <!-- Contact Info in Mobile Menu -->
+      <div class="mobile-contact-info">
+        <p>Chișinău, bd. Cuza Vodă 30/2</p>
+        <p class="mobile-phone">
+          <a href="tel:+37368805305">+373-688-05-305</a>
+        </p>
+      </div>
+
+      <!-- Social Icons in Mobile Menu -->
+      <div class="mobile-social-icons">
+        <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
