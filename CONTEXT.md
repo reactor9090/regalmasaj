@@ -1,7 +1,7 @@
 Project Name: Regal Masaj
 Location: Chișinău, Moldova
 Language: Romanian
-Goal: Create a luxury, elegant, and relaxing web experience that communicates professionalism, sophistication, and warmth — inviting visitors to schedule a massage session. The design should make visitors feel relaxed and confident, inspired by the premium experience of a high-end massage studio.
+Goal: Create a luxury, elegant, and relaxing web experience that communicates professionalism, sophistication, and warmth — inviting visitors to schedule a massage session. The design should make visitors feel relaxed and confident, inspired by the premium experience of a high-end massage salon.
 
 Colors (60/30/10 rule)
 Primary (60%) — Background: #0B0B0B (Deep Black)
