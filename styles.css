@@ -540,6 +540,14 @@ body {
   color: #d4af37;
   text-align: center;
   margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.servicii-title.animate {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .servicii-description {
@@ -548,11 +556,18 @@ body {
   font-weight: 300;
   line-height: 1.6;
   color: #ffffff;
-  opacity: 0.8;
+  opacity: 0;
   max-width: 900px;
   margin: 0 auto 40px;
   text-align: center;
   padding: 0 20px;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out 0.2s, transform 0.6s ease-out 0.2s;
+}
+
+.servicii-description.animate {
+  opacity: 0.8;
+  transform: translateY(0);
 }
 
 .servicii-divider {
@@ -2693,6 +2708,8 @@ body {
   padding-top: 180px;
   transform: translateX(-100%);
   transition: transform 0.4s ease;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .mobile-menu.active {

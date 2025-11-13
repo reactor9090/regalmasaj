@@ -9,8 +9,8 @@ hamburger.addEventListener('click', () => {
     body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : 'auto';
 });
 
-// Close mobile menu when clicking on a link
-const mobileLinks = document.querySelectorAll('.mobile-nav-links a');
+// Close mobile menu when clicking on a link (except dropdown toggles)
+const mobileLinks = document.querySelectorAll('.mobile-nav-links a:not(.mobile-dropdown-toggle)');
 mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
         hamburger.classList.remove('active');
@@ -33,7 +33,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Animate Servicii Items on Scroll
+// Animate Servicii Section on Scroll
 const observerOptions = {
     root: null,
     rootMargin: '0px',
@@ -49,6 +49,18 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
+// Observe servicii title and description
+const serviciiTitle = document.querySelector('.servicii-title');
+const serviciiDescription = document.querySelector('.servicii-description');
+
+if (serviciiTitle) {
+    observer.observe(serviciiTitle);
+}
+if (serviciiDescription) {
+    observer.observe(serviciiDescription);
+}
+
+// Observe servicii items
 const serviciiItems = document.querySelectorAll('.servicii-item');
 serviciiItems.forEach(item => {
     observer.observe(item);
