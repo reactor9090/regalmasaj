@@ -32,3 +32,34 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+// Animate Servicii Items on Scroll
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.2
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+const serviciiItems = document.querySelectorAll('.servicii-item');
+serviciiItems.forEach(item => {
+    observer.observe(item);
+});
+
+// Mobile Dropdown Toggle
+const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+mobileDropdownToggles.forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const parent = toggle.parentElement;
+        parent.classList.toggle('active');
+    });
+});
