@@ -12,6 +12,90 @@ body {
 }
 
 /* ========================================
+   FLOATING PROGRAMARE BUTTON
+   ======================================== */
+
+.floating-programare {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  width: 100px;
+  height: 100px;
+}
+
+.floating-programare-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #D4AF37 0%, #C5A028 100%);
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+  transition: all 0.3s ease;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+}
+
+.floating-programare-link:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.6);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.floating-programare-link:active {
+  transform: scale(0.95);
+}
+
+.floating-programare-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 10px;
+}
+
+.floating-programare-text {
+  font-family: "Cinzel", serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #0B0B0B;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+/* Tablet adjustments */
+@media (min-width: 576px) {
+  .floating-programare {
+    width: 110px;
+    height: 110px;
+    bottom: 25px;
+    right: 25px;
+  }
+  
+  .floating-programare-text {
+    font-size: 12px;
+  }
+}
+
+/* Desktop adjustments */
+@media (min-width: 992px) {
+  .floating-programare {
+    width: 120px;
+    height: 120px;
+    bottom: 30px;
+    right: 30px;
+  }
+  
+  .floating-programare-text {
+    font-size: 13px;
+  }
+}
+
+/* ========================================
    HERO SECTION
    ======================================== */
 
