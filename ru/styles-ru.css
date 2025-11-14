@@ -1,0 +1,7 @@
+/* Russian version specific styles */
+
+@media (max-width: 480px) and (min-width: 292px) {
+  .hero-cta-mobile {
+    top: 43%;
+  }
+}
