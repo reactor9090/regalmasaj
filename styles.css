@@ -1439,6 +1439,10 @@ body {
   text-transform: uppercase;
 }
 
+.pricing-title:not(:first-child) {
+  margin-top: 25px;
+}
+
 .pricing-options {
   display: flex;
   flex-direction: column;
@@ -2196,7 +2200,7 @@ body {
 
 .footer-top {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 40px;
   margin-bottom: 40px;
 }
@@ -2328,6 +2332,56 @@ body {
   background-color: rgba(212, 175, 55, 0.1);
 }
 
+/* Footer Messaging Links (Scrie-ne) */
+.footer-messaging {
+  display: flex; /* Visible on all devices */
+  flex-direction: column;
+}
+
+.footer-messaging-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-messaging-links li a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+  opacity: 0.9;
+}
+
+.footer-messaging-links li a i {
+  color: #d4af37;
+  font-size: 20px;
+  width: 24px;
+  flex-shrink: 0;
+}
+
+.footer-messaging-links li a:hover {
+  color: #d4af37;
+  opacity: 1;
+}
+
+.footer-messaging-links li a:hover i {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+/* Add spacing between Scrie-ne and Urmărește-ne sections */
+.footer-messaging h3:not(:first-child) {
+  margin-top: 25px;
+}
+
 /* Footer Bottom */
 .footer-bottom {
   padding-top: 30px;
@@ -2345,6 +2399,13 @@ body {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1199px) {
+  .footer-top {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+  }
+}
+
 @media (max-width: 991px) {
   .footer-top {
     grid-template-columns: repeat(2, 1fr);
@@ -2382,6 +2443,14 @@ body {
   .footer-links li a,
   .footer-contact li {
     font-size: 13px;
+  }
+
+  .footer-messaging-links li a {
+    font-size: 13px;
+  }
+
+  .footer-messaging-links li a i {
+    font-size: 18px;
   }
 
   .footer-bottom {
@@ -2481,122 +2550,36 @@ body {
   background-color: rgba(212, 175, 55, 0.1);
 }
 
-/* Language Switcher Dropdown */
+/* Language Switcher */
 .language-switcher {
-  margin-right: 25px;
-  position: relative;
-}
-
-.lang-dropdown {
-  position: relative;
-}
-
-.lang-current {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  background: transparent;
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  border-radius: 20px;
-  padding: 8px 15px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: "Cinzel", serif;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: #ffffff;
-}
-
-.lang-current:hover {
-  border-color: #d4af37;
-  background-color: rgba(212, 175, 55, 0.1);
-}
-
-.lang-current .lang-flag {
-  display: none;
-}
-
-.lang-current .lang-text {
-  font-weight: 600;
-}
-
-.lang-current i {
-  font-size: 10px;
-  transition: transform 0.3s ease;
-}
-
-.lang-dropdown:hover .lang-current i {
-  transform: rotate(180deg);
-}
-
-.lang-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 10px;
-  background-color: #0b0b0b;
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  border-radius: 8px;
-  min-width: 150px;
-  padding: 8px 0;
-  list-style: none;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease, visibility 0.3s ease, margin-top 0.3s ease;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
-  z-index: 1001;
-}
-
-.lang-dropdown:hover .lang-menu {
-  opacity: 1;
-  visibility: visible;
-  margin-top: 5px;
-}
-
-.lang-menu li {
-  margin: 0;
-  padding: 0;
-}
-
-.lang-option {
   display: flex;
   align-items: center;
   gap: 10px;
-  width: 100%;
-  padding: 10px 16px;
-  background: transparent;
-  border: none;
-  border-left: 3px solid transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  font-family: "Montserrat", sans-serif;
+  margin-right: 25px;
+}
+
+.lang-link {
+  font-family: "Cinzel", serif;
   font-size: 14px;
-  font-weight: 400;
-  letter-spacing: 0.5px;
-  color: #ffffff;
-  text-align: left;
-}
-
-.lang-option:hover {
-  background-color: rgba(212, 175, 55, 0.1);
-  color: #d4af37;
-  border-left-color: #d4af37;
-  padding-left: 20px;
-}
-
-.lang-option.active {
-  color: #d4af37;
-  border-left-color: #d4af37;
-}
-
-.lang-option .lang-flag {
-  font-size: 18px;
-  line-height: 1;
-}
-
-.lang-option .lang-text {
   font-weight: 500;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.lang-link:hover {
+  color: #d4af37;
+}
+
+.lang-link.active {
+  color: #d4af37;
+}
+
+.lang-divider {
+  font-family: "Cinzel", serif;
+  font-size: 14px;
+  color: rgba(212, 175, 55, 0.5);
 }
 
 /* Contact Info */
@@ -2931,115 +2914,35 @@ body {
   padding-left: 20px;
 }
 
-/* Mobile Language Switcher Dropdown (in navbar) */
+/* Mobile Language Switcher */
 .mobile-language-switcher {
   display: none;
-  position: relative;
-}
-
-.mobile-lang-dropdown {
-  position: relative;
-}
-
-.mobile-lang-current {
-  display: flex;
   align-items: center;
-  justify-content: center;
-  background: transparent;
-  border: 1px solid rgba(212, 175, 55, 0.3);
-  border-radius: 50%;
-  width: 38px;
-  height: 38px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  padding: 0;
+  gap: 8px;
 }
 
-.mobile-lang-current:hover,
-.mobile-lang-dropdown.active .mobile-lang-current {
-  border-color: #d4af37;
-  background-color: rgba(212, 175, 55, 0.1);
-}
-
-.mobile-lang-current .lang-flag {
-  font-family: "Cinzel", serif;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1;
-  color: #d4af37;
-  letter-spacing: 0.5px;
-}
-
-.mobile-lang-menu {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  margin-top: 10px;
-  background-color: rgba(11, 11, 11, 0.98);
-  border: 1px solid rgba(212, 175, 55, 0.5);
-  border-radius: 8px;
-  min-width: 140px;
-  padding: 8px 0;
-  list-style: none;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.8);
-  backdrop-filter: blur(10px);
-  z-index: 1001;
-  /* color: rgba(212, 175, 55, 0.5); */
-}
-
-.mobile-lang-dropdown.active .mobile-lang-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-.mobile-lang-menu li {
-  margin: 0;
-  padding: 0;
-}
-
-.mobile-lang-option {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  width: 100%;
-  padding: 10px 16px;
-  background: transparent;
-  border: none;
-  border-left: 3px solid transparent;
-  cursor: pointer;
-  transition: all 0.3s ease;
+.mobile-lang-link {
   font-family: "Cinzel", serif;
   font-size: 13px;
   font-weight: 500;
-  letter-spacing: 0.5px;
+  letter-spacing: 1px;
   color: #ffffff;
-  text-align: left;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.mobile-lang-option:hover {
-  background-color: rgba(212, 175, 55, 0.1);
+.mobile-lang-link:hover {
   color: #d4af37;
-  border-left-color: #d4af37;
-  padding-left: 20px;
 }
 
-.mobile-lang-option.active {
+.mobile-lang-link.active {
   color: #d4af37;
-  border-left-color: #d4af37;
 }
 
-.mobile-lang-option .lang-flag {
-  font-size: 18px;
-  line-height: 1;
-}
-
-.mobile-lang-option .lang-text {
-  font-weight: 500;
+.mobile-lang-divider {
+  font-family: "Cinzel", serif;
+  font-size: 13px;
+  color: rgba(212, 175, 55, 0.5);
 }
 
 /* Mobile Contact Info */

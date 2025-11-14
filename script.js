@@ -76,20 +76,3 @@ mobileDropdownToggles.forEach(toggle => {
     });
 });
 
-// Mobile Language Dropdown Toggle
-const mobileLangDropdown = document.querySelector('.mobile-lang-dropdown');
-const mobileLangCurrent = document.querySelector('.mobile-lang-current');
-
-if (mobileLangCurrent) {
-    mobileLangCurrent.addEventListener('click', (e) => {
-        e.stopPropagation();
-        mobileLangDropdown.classList.toggle('active');
-    });
-
-    // Close dropdown when clicking outside
-    document.addEventListener('click', (e) => {
-        if (mobileLangDropdown && !mobileLangDropdown.contains(e.target)) {
-            mobileLangDropdown.classList.remove('active');
-        }
-    });
-}
